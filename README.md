@@ -2,7 +2,9 @@ Live URL: http://13.49.245.54:3000.
 
 Introduction
 
-This project is a comprehensive travel guide application developed using modern web technologies and Geographic Information Systems (GIS) principles. The primary objective is to manage heterogeneous spatial data (points and polygons) within a flexible structure, ensuring high performance and role-based access control. The system encompasses all stages of a Full-Stack Web-GIS project, including user authentication, spatial data production, spatial analysis, and performance testing.
+ This project is an interactive Digital Travel Guide platform designed for travelers and tourism professionals. The primary goal of the application is to ensure that tourist attractions are not just listed, but managed in a community-driven and secure manner via an interactive map. While Travelers create personal travel logs by pinning visited locations with photos and star ratings, Tour Guides use their expertise to mark 'non-recommended or restricted areas' with polygons to ensure user safety. At the heart of the system, the Heatmap analysis provides guidance to travelers for their next routes by instantly visualizing which tourist areas are more popular. With this structure, the application offers a smart tourism ecosystem that enables data-driven decisions.
+
+Technical part, this project is a comprehensive travel guide application developed using modern web technologies and Geographic Information Systems (GIS) principles. The primary objective is to manage heterogeneous spatial data (points and polygons) within a flexible structure, ensuring high performance and role-based access control. The system encompasses all stages of a Full-Stack Web-GIS project, including user authentication, spatial data production, spatial analysis, and performance testing.
 
 Methodology
 
@@ -11,9 +13,20 @@ During the development and modification of this project, numerous updates were p
 
 Managing different user types (20%):
 The system explicitly defines roles, ownership, and authorization rules:
+
+![Kullanıcı Rolleri ve Yetkiler](roller.png)
+
 Gezgin (User): Can add points to the map and can only update or delete the points they created.
+
+![Yeni Nokta Oluşturma](createdpoint.png)
+![Düzenleme ve Silme Arayüzü](editdelete.png)
+
 Tur Rehberi (Manager): In addition to point operations, they can draw and manage "Non-recommended Area" polygons on the map.
+
+![Poligon Katmanı](polygon.png)
+
 Admin (Administrator): Has full access to all data; can delete or update any user's data or polygons.
+
 
 Performance monitoring (25%):
 An experiment was designed to observe spatial query performance. A hierarchical access logic, similar to R-Trees, was utilized over the NoSQL database.json file. The experiment demonstrated that through indexing and document-based access, response times remained between 1-2ms even under 1200 concurrent requests. This confirms that retrieving data via direct key-value matching optimizes system speed.
@@ -25,6 +38,10 @@ Read: Listing and visualizing points on the map.
 Update: Updating the descriptions/notes of an existing point.
 Delete: Completely removing a feature from the system.
 Filter: Users can filter geographic data based on "Star Rating" criteria.
+
+![Yıldız Puanına Göre Filtreleme](filtreleme.png).
+![Arama ](search.png)
+
 Line/polygon layer (5% bonus): Restricted area polygons drawn by tour guides have been integrated, fulfilling the bonus requirement.
 Spatial Analysis (CBS Analysis):The system features a Spatial Density Analysis (Heatmap) layer. This analysis dynamically calculates the concentration of travel points across different cities. Using a color-coded ramp (Purple scale), it identifies popular travel destinations. This demonstrates the system's ability to process spatial attributes stored in the NoSQL DBMS to generate real-time geographic insights.
 (The analysis images have been uploaded to GitHub as heatmap.png)
@@ -44,6 +61,7 @@ Response Time: The average response time was measured at 1ms, with a p99 value o
 (The test images have been uploaded to GitHub as graphic_image.png.)
 
 ![Performans Grafiği](grafik_görsel.png)
+![Artillery Load Test Results](artillerytestcmdekranı.png)
 
 API development (25%):
 The API exposes both spatial resources (points/polygons) and non-spatial resources (users):
@@ -72,3 +90,4 @@ Database Persistence: The database.json file is maintained on the cloud storage 
 (The AWS images have been uploaded to GitHub as amazonsunucuekranı.png.)
 
 ![AWS Sunucu Ekranı](amazonsunucuekranı.png)
+nsunucuekranı.png.)
