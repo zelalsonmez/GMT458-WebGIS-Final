@@ -66,3 +66,5 @@ File Transfer: Project files (index.js, database.json, and the public directory)
 Process Management: The backend server is initialized using node index.js, handling real-time spatial data requests from the Live IP.
 Database Persistence: The database.json file is maintained on the cloud storage to ensure CRUD operations persist across sessions.
 (The AWS images have been uploaded to GitHub as amazonsunucuekranı.png.)
+
+![Heatmap Analizi](heatmap.png)
