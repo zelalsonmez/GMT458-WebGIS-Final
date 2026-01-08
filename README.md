@@ -43,7 +43,7 @@ Findings: The system maintained a 0% error rate despite simulating 600 virtual u
 Response Time: The average response time was measured at 1ms, with a p99 value of 2ms.
 (The test images have been uploaded to GitHub as graphic_image.png.)
 
-![Performans Grafiği](graphic_image.png)
+![Performans Grafiği](grafik_görsel.png)
 
 API development (25%):
 The API exposes both spatial resources (points/polygons) and non-spatial resources (users):
