@@ -29,6 +29,8 @@ Line/polygon layer (5% bonus): Restricted area polygons drawn by tour guides hav
 Spatial Analysis (CBS Analysis):The system features a Spatial Density Analysis (Heatmap) layer. This analysis dynamically calculates the concentration of travel points across different cities. Using a color-coded ramp (Purple scale), it identifies popular travel destinations. This demonstrates the system's ability to process spatial attributes stored in the NoSQL DBMS to generate real-time geographic insights.
 (The analysis images have been uploaded to GitHub as heatmap.png)
 
+![Heatmap Analizi](heatmap.png)
+
 Authentication (15%):
 A secure sign-up/login system has been implemented. Passwords are encrypted using the bcryptjs library and stored securely in the NoSQL database. This ensures that unauthorized users cannot create data and guarantees user ownership rules.
 
@@ -40,6 +42,8 @@ The project was subjected to load and stress testing using the Artillery tool wi
 Findings: The system maintained a 0% error rate despite simulating 600 virtual users and 1200 requests.
 Response Time: The average response time was measured at 1ms, with a p99 value of 2ms.
 (The test images have been uploaded to GitHub as graphic_image.png.)
+
+![Performans Grafiği](graphic_image.png)
 
 API development (25%):
 The API exposes both spatial resources (points/polygons) and non-spatial resources (users):
@@ -67,4 +71,4 @@ Process Management: The backend server is initialized using node index.js, handl
 Database Persistence: The database.json file is maintained on the cloud storage to ensure CRUD operations persist across sessions.
 (The AWS images have been uploaded to GitHub as amazonsunucuekranı.png.)
 
-![Heatmap Analizi](heatmap.png)
+![AWS Sunucu Ekranı](amazonsunucuekranı.png)
